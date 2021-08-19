@@ -16,6 +16,7 @@ namespace FinalProjectDraft.DAL
        public ProjectMangerDAL(UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
+            //change
             this.context = context;
         }
         public async Task InsertUserAsync(IdentityUser user)
