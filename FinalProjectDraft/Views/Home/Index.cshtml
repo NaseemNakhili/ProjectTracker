@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+ 
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td>Item.Name</td>
+                <td>Item.Description</td>
+                <td>Item.price</td>
+                <td>Item.Type.Name</td>
+                <td><a class="btn btn-info" href="/Item/Edit?ItemId=Item.Id">Edit</a></td>
+                <td><a class="btn btn-danger" onclick="return confirm('Want to delete ?');" href="/Book/Delete?itemId=Item.Id">Delete</a></td>
+
+            </tr>
+            <tr>
+                <td>Item.Name</td>
+                <td>Item.Description</td>
+                <td>Item.price</td>
+                <td>Item.Type.Name</td>
+                <td><a class="btn btn-info" href="/Item/Edit?ItemId=Item.Id">Edit</a></td>
+                <td><a class="btn btn-danger" onclick="return confirm('Want to delete ?');" href="/Book/Delete?itemId=Item.Id">Delete</a></td>
+
+            </tr>
+
+
+        </tbody>
+      </table>
+</div>

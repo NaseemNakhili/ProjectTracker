@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FinalProjectDraft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leon | Template One</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="~/css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="containerr">
+            <img class="logo" src="~/Image/logo.png" alt="" />
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="/Home/Index">Home</a></li>
+                    <li><a href="/Home/privacy">privacy</a></li>
+                    <li><a href="/Registration/RegistUser">Registration</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing Section -->
+    <div class="landing">
+        <div class="intro-text">
+            <h1>Hello There</h1>
+            <p> Super Creative & Minimal Agency Web Develop </p>
+        </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <div class="containerr">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Start Contact -->
+    <div class="contact">
+        <div class="containerr">
+            <h2 class="special-heading">Contact</h2>
+            <p>We are born to create</p>
+            <div class="info">
+                <p class="label">Feel free to drop us a line at:</p>
+                <a href="mailto:naseemnakhili98@gmail.com?subject=Contact" class="link">Naseemnakhili98@mail.com</a>
+                <div class="social">
+                    Find Us On Social Networks
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2021 <span>Naseem Nakhili</span> All Right Reserved</div>
+    <!-- End Footer -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

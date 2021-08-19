@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using FinalProjectDraft.RegistratonDTO
+@model UserRegistDTO
+<form action="/Registration/RegistUser" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            @Html.LabelFor(x => x.FirstName)
+            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.FirstName, null, new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-md-4">
+            @Html.LabelFor(x => x.LastName)
+            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.LastName, null, new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputPassword4">Email </label>
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
+            @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            @Html.LabelFor(x => x.Password)
+            @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Password, null, new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-md-6">
+            @Html.LabelFor(x => x.ConfirmPassword)
+            @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.ConfirmPassword, null, new { @class = "text-danger" })
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                @Html.LabelFor(x => x.PhoneNumber)
+                @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PhoneNumber, null, new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputState">Role</label>
+                <select id="inputState" name="RoleId" class="form-control">
+
+                    @*<option value="1">Project Manger</option>
+                    <option value="2">Team Leader</option>
+                    <option value="3">Developer</option>*@
+                   @foreach (var pro in (List<IdentityRole>)ViewBag.Rols)
+        {
+            <option value="@pro.Id">@pro.NormalizedName</option>
+        }
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
